@@ -17,6 +17,7 @@
     var worksheetName = tableau.extensions.settings.get("worksheet");
     var categoryColumnNumber = tableau.extensions.settings.get("categoryColumnNumber");
     var valueColumnNumber = tableau.extensions.settings.get("valueColumnNumber");
+    var ChartType = tableau.extensions.settings.get("ChartType")
  
     const worksheets=tableau.extensions.dashboardContent.dashboard.worksheets;
     var worksheet=worksheets.find(function (sheet) {
@@ -34,7 +35,7 @@
  
       var ctx = $("#myChart");
       var myChart = new Chart(ctx, {
-        type: 'polarArea',
+        type: ChartType,
         data: {
           labels: labels,
           datasets: [{
