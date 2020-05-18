@@ -14,6 +14,7 @@
             $("#selectWorksheet").append("<option value='" + worksheet.name + "'>" + worksheet.name + "</option>");
         });
         var worksheetName = tableau.extensions.settings.get("worksheet");
+        $("#SelectChartType").val(tableau.extensions.settings.get("ChartType"));
         if (worksheetName != undefined) {
             $("#selectWorksheet").val(worksheetName);
             columnsUpdate();
@@ -28,8 +29,6 @@
     }
  
     function columnsUpdate() {
-
-        $("#SelectChartType").val(tableau.extensions.settings.get("ChartType"));
 
         var worksheets = tableau.extensions.dashboardContent.dashboard.worksheets;
         var worksheetName = $("#selectWorksheet").val();
