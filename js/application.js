@@ -5,6 +5,7 @@
    // initialize the extension
     tableau.extensions.initializeAsync({ 'configure':configure }).then(function () {
       drawChartJS();
+      // add event listener to change the chart if any of the settings chagned
       unregisterSettingsEventListener = tableau.extensions.settings.addEventListener(tableau.TableauEventType.SettingsChanged, (settingsEvent) => {
         drawChartJS();
       });
