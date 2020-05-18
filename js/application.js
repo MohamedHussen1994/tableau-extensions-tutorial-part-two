@@ -36,7 +36,7 @@
          // Draw the chart as before.
          var ctx = $("#myChart");
          var myChart = new Chart(ctx, {
-            type: 'doughnut',
+            type: 'polarArea',
             data: {
                labels: labels, // This now comes from Tableau
                datasets: [{
