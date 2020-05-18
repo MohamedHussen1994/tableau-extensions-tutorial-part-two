@@ -14,7 +14,7 @@
             $("#selectWorksheet").append("<option value='" + worksheet.name + "'>" + worksheet.name + "</option>");
         });
         var worksheetName = tableau.extensions.settings.get("worksheet");
-        $("#SelectChartType").val(tableau.extensions.settings.get("ChartType"));
+        //$("#SelectChartType").val(tableau.extensions.settings.get("ChartType"));
         if (worksheetName != undefined) {
             $("#selectWorksheet").val(worksheetName);
             columnsUpdate();
@@ -49,6 +49,7 @@
             });
             $("#selectCategory").val(tableau.extensions.settings.get("categoryColumnNumber"));
             $("#selectValue").val(tableau.extensions.settings.get("valueColumnNumber"));
+            //$("#SelectChartType").val(tableau.extensions.settings.get("ChartType"));
         });
     }
  
@@ -65,7 +66,7 @@
         tableau.extensions.settings.set("worksheet", $("#selectWorksheet").val());
         tableau.extensions.settings.set("categoryColumnNumber", $("#selectCategory").val());
         tableau.extensions.settings.set("valueColumnNumber", $("#selectValue").val());
-        //tableau.extensions.settings.set("ChartType", $("SelectChartType").val());
+        tableau.extensions.settings.set("ChartType", $("SelectChartType").val());
  
         tableau.extensions.settings.saveAsync().then((currentSettings) => {
             tableau.extensions.ui.closeDialog("10");
