@@ -49,7 +49,7 @@
             });
             $("#selectCategory").val(tableau.extensions.settings.get("categoryColumnNumber"));
             $("#selectValue").val(tableau.extensions.settings.get("valueColumnNumber"));
-            //$("#SelectChartType").val(tableau.extensions.settings.get("ChartType"));
+            $("#SelectChartType").val(tableau.extensions.settings.get("ChartType"));
         });
     }
  
