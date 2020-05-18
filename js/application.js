@@ -2,6 +2,7 @@
  
 (function () {
   $(document).ready(function () {
+   // initialize the extension
     tableau.extensions.initializeAsync({ 'configure':configure }).then(function () {
       drawChartJS();
       unregisterSettingsEventListener = tableau.extensions.settings.addEventListener(tableau.TableauEventType.SettingsChanged, (settingsEvent) => {
