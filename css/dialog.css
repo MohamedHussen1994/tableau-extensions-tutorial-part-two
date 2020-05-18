@@ -3,9 +3,7 @@ body {
  }
 img {
     width: 150px;
-    float: left; 
-    padding: 0 20 0 0;
-}
+    }
  .container {
     padding: 0px;
 }
