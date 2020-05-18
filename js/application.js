@@ -26,7 +26,7 @@
  
          var ctx = $("#myChart");
          var myChart = new Chart(ctx, {
-            type: 'doughnut',
+            type: 'radar',
             data: {
                labels: labels,
                datasets: [{
