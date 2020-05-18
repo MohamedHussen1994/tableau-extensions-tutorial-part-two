@@ -49,6 +49,7 @@
             });
             $("#selectCategory").val(tableau.extensions.settings.get("categoryColumnNumber"));
             $("#selectValue").val(tableau.extensions.settings.get("valueColumnNumber"));
+            // added by me
             $("#SelectChartType").val(tableau.extensions.settings.get("ChartType"));
         });
     }
@@ -66,6 +67,7 @@
         tableau.extensions.settings.set("worksheet", $("#selectWorksheet").val());
         tableau.extensions.settings.set("categoryColumnNumber", $("#selectCategory").val());
         tableau.extensions.settings.set("valueColumnNumber", $("#selectValue").val());
+        // added by me
         tableau.extensions.settings.set("ChartType", $("SelectChartType").val());
  
         tableau.extensions.settings.saveAsync().then((currentSettings) => {
