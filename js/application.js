@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var ctx = $("#myChart");
     var myChart = new Chart(ctx, {
-       type: 'doughnut',
+       type: 'polarArea',
        data: {
           labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
           datasets: [{
