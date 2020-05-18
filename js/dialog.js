@@ -64,7 +64,7 @@
         tableau.extensions.settings.set("worksheet", $("#selectWorksheet").val());
         tableau.extensions.settings.set("categoryColumnNumber", $("#selectCategory").val());
         tableau.extensions.settings.set("valueColumnNumber", $("#selectValue").val());
-        tableau.extensions.settings.set("ChartType", $("SelectChartType").val());
+        //tableau.extensions.settings.set("ChartType", $("SelectChartType").val());
  
         tableau.extensions.settings.saveAsync().then((currentSettings) => {
             tableau.extensions.ui.closeDialog("10");
