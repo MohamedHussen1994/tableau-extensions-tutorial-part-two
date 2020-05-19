@@ -48,7 +48,7 @@
   }
  
   function configure() {
-    const popupUrl='dialog.html';
+    const popupUrl=`${window.location.origin}/dialog.html`;
     let defaultPayload="";
     tableau.extensions.ui.displayDialogAsync(popupUrl, defaultPayload, { height:400, width:430 }).then((closePayload) => {
       drawChartJS();
